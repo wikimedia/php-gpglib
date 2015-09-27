@@ -54,7 +54,7 @@ class ShellGpgLib implements GpgLib, LoggerAwareInterface {
 	 */
 	public function validateKey( $key, $type = GpgLib::KEY_BOTH ) {
 		$validKeyTypes = array( GpgLib::KEY_PUBLIC, GpgLib::KEY_PRIVATE, GpgLib::KEY_BOTH );
-		if ( !in_array( $type, $validKeyTypes,true ) ) {
+		if ( !in_array( $type, $validKeyTypes, true ) ) {
 			throw new GpgLibException( "invalid type parameter to validateKey: $type" );
 		}
 
@@ -95,7 +95,7 @@ class ShellGpgLib implements GpgLib, LoggerAwareInterface {
 					$this->logger->info( 'Public key passed but private expected',
 						array( 'output' => $output ) );
 					return false;
-				} else if ( $recordType === 'sec' && $type === GpgLib::KEY_PUBLIC ) {
+				} elseif ( $recordType === 'sec' && $type === GpgLib::KEY_PUBLIC ) {
 					$this->logger->info( 'Private key passed but public expected',
 						array( 'output' => $output ) );
 					return false;

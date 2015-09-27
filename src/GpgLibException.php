@@ -2,5 +2,5 @@
 
 namespace GpgLib;
 
-
-class GpgLibException extends \Exception {}
+class GpgLibException extends \Exception {
+}

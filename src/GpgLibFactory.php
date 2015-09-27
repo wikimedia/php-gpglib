@@ -2,7 +2,6 @@
 
 namespace GpgLib;
 
-
 abstract class GpgLibFactory {
 	/**
 	 * @return GpgLib
