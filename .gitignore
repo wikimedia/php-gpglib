@@ -1,0 +1,9 @@
+# Composer
+/vendor/
+/composer.lock
+
+# IDE
+*~
+.*.swp
+/.idea
+/php-gpglib.iml
