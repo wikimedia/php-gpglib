@@ -2,6 +2,7 @@ This directory contains some test files created with GnuPG 1.4.16:
 
 * public.asc: a public key for heinrichh@duesseldorf.de 
 * private.asc: the private key for heinrichh@duesseldorf.de
+* 2xpublic.asc: a key dump with two different public keys
 * cleartext.txt: some text
 * ciphertext.asc: cleartext.txt encrypted
   (`gpg --encrypt --armor -r heinrichh@duesseldorf.de test/data/cleartext.txt`)

@@ -23,9 +23,9 @@ class PgpMime {
 	 * @param array $headers Email headers in "Header-Name" => "value" format
 	 * @param string $body Email body
 	 * @param string $publicKey Public key of the receiver for encryption
-	 * @return array [$newHeaders, $newBody]
+	 * @return array [$newHeaders, $newBody] or [false, false] on failure
 	 */
-	public function encrypt( array $headers, $body, $publicKey) {
+	public function encrypt( array $headers, $body, $publicKey ) {
 		$preparedBody = '';
 		foreach ( $headers as $name => $value ) {
 			if ( strpos( $name, 'Content-' ) === 0 ) {
@@ -35,7 +35,10 @@ class PgpMime {
 		}
 		$preparedBody .= "\n$body";
 
-		$encryptedBody = $this->gpgLib->encrypt( $preparedBody, $publicKey);
+		$encryptedBody = $this->gpgLib->encrypt( $preparedBody, $publicKey );
+		if ( !$encryptedBody ) {
+			return array( false, false );
+		}
 
 		$boundary = $this->getBoundary( $encryptedBody );
 

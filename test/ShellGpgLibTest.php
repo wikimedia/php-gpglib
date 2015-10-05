@@ -34,6 +34,7 @@ class ShellGpgLibTest extends \PHPUnit_Framework_TestCase {
 			array( 'private.asc', GpgLib::KEY_PRIVATE, true ),
 			array( 'public.asc', GpgLib::KEY_PRIVATE, false ),
 			array( 'private.asc', GpgLib::KEY_PUBLIC, false  ),
+			array( '2xpublic.asc', GpgLib::KEY_PUBLIC, false ),
 			array( 'cleartext.txt', GpgLib::KEY_BOTH, false  ),
 		);
 	}

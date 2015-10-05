@@ -50,6 +50,8 @@ class ShellGpgLibFactory extends GpgLibFactory implements LoggerAwareInterface {
 	 * @return ShellGpgLib
 	 */
 	public function create() {
-		return new ShellGpgLib( $this->gpgBinary, $this->tempDirFactory );
+		$gpgLib = new ShellGpgLib( $this->gpgBinary, $this->tempDirFactory );
+		$gpgLib->setLogger( $this->logger );
+		return $gpgLib;
 	}
 }
