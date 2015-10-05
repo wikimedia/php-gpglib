@@ -6,6 +6,10 @@ use Psr\Log\LoggerAwareInterface;
 use Psr\Log\LoggerInterface;
 use Psr\Log\NullLogger;
 
+/**
+ * Implementation of the GpgLib interface that invokes the `gpg` command via shell.
+ * @package GpgLib
+ */
 class ShellGpgLib implements GpgLib, LoggerAwareInterface {
 	/** @var string Location of the GnuPG binary. */
 	protected $gpgBinary;

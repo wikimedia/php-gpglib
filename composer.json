@@ -1,7 +1,7 @@
 {
     "name": "wikimedia/gpglib",
     "description": "A wrapper around GPG for stateless operations.",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "keywords": ["gpg", "encryption"],
     "license": "MIT",
     "authors": [
@@ -21,7 +21,8 @@
         "phpunit/phpunit": "4.8.*",
         "mediawiki/mediawiki-codesniffer": "^0.4.0",
         "jakub-onderka/php-console-highlighter": "0.*",
-        "jakub-onderka/php-parallel-lint": "0.*"
+        "jakub-onderka/php-parallel-lint": "0.*",
+        "phpdocumentor/phpdocumentor": "2.*"
     },
     "autoload": {
         "psr-4": {
@@ -38,6 +39,9 @@
             "parallel-lint src test",
             "phpunit test",
             "phpcs -p --standard=vendor/mediawiki/mediawiki-codesniffer/MediaWiki src"
+        ],
+        "build-doc": [
+            "phpdoc -d ./src -t ./docs"
         ]
     }
 }
