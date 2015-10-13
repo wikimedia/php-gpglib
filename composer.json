@@ -11,8 +11,8 @@
         }
     ],
     "support": {
-        "issues": "https://github.com/tgr/php-gpglib/issues",
-        "source": "https://github.com/tgr/php-gpglib"
+        "issues": "https://github.com/wikimedia/php-gpglib/issues",
+        "source": "https://github.com/wikimedia/php-gpglib"
     },
     "require": {
         "psr/log": "1.0.0"
