@@ -1,7 +1,6 @@
 {
     "name": "wikimedia/gpglib",
     "description": "A wrapper around GPG for stateless operations.",
-    "version": "0.2.1",
     "keywords": ["gpg", "encryption"],
     "license": "MIT",
     "authors": [
