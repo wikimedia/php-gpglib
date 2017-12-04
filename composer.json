@@ -14,7 +14,7 @@
         "source": "https://github.com/wikimedia/php-gpglib"
     },
     "require": {
-        "psr/log": "1.0.0"
+        "psr/log": "^1.0.0"
     },
     "require-dev": {
         "phpunit/phpunit": "4.8.*",
